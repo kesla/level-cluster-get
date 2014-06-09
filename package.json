@@ -1,6 +1,6 @@
 {
   "name": "level-cluster-get",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Given a key, get what all values from a cluster of level-instances",
   "main": "cluster-get.js",
   "scripts": {
