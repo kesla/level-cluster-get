@@ -1,9 +1,9 @@
 var level = require('level-test')()
-  , test = require('tape')
+  , test = require('tap').test
 
 test('simple', function (t) {
   var level = require('level-test')()
-    , clusterGet = require('./cluster-get')
+    , clusterGet = require('../cluster-get')
 
     // server 1
     , config1 = {
@@ -13,7 +13,7 @@ test('simple', function (t) {
           ]
         , port: 8000
       }
-    , db1 = level('simple-server1')
+    , db1 = level('server1')
     , get1 = clusterGet(db1, config1)
 
     // server 2
@@ -24,7 +24,7 @@ test('simple', function (t) {
           ]
         , port: 8001
       }
-    , db2 = level('simple-server2')
+    , db2 = level('server2')
     , get2 = clusterGet(db2, config2)
 
     // server 3
@@ -35,7 +35,7 @@ test('simple', function (t) {
           ]
         , port: 8002
       }
-    , db3 = level('simple-server3')
+    , db3 = level('server3')
     , get3 = clusterGet(db3, config3)
 
   db1.put('foo', 'bar', function () {

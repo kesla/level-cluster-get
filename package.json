@@ -4,7 +4,7 @@
   "description": "Given a key, get what all values from a cluster of level-instances",
   "main": "cluster-get.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tap test/*"
   },
   "author": "David Björklund <david.bjorklund@gmail.com>",
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "level-test": "^1.6.3",
-    "tape": "^2.13.2"
+    "tap": "^0.4.11"
   },
   "repository": {
     "type": "git",
